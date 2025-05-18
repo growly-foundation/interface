@@ -49172,6 +49172,7 @@ __metadata:
     js-yaml: 4.1.0
     knip: 5.50.5
     moti: 0.29.0
+    node-gyp: 10.0.1
     prettier: 3.3.2
     prettier-plugin-organize-imports: 3.2.4
     syncpack: 8.5.14
