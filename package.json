@@ -29,6 +29,9 @@
     "turbo-ignore": "1.11.3",
     "viem": "2.28.1"
   },
+  "devDependencies": {
+    "node-gyp": "10.0.1"
+  },
   "engines": {
     "node": "=22.13.1",
     "yarn": ">=3.2.3",

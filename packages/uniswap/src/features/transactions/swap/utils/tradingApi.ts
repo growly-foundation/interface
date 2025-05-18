@@ -199,7 +199,8 @@ export function computeRoutes(
         routev2: isOnlyV2 ? new V2Route(route.map(parseV2PairApi), parsedCurrencyIn, parsedCurrencyOut) : null,
         mixedRoute:
           !isOnlyV3 && !isOnlyV2 && !isOnlyV4
-            ? new MixedRouteSDK(route.map(parseMixedRouteApi), parsedCurrencyIn, parsedCurrencyOut)
+            ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              new MixedRouteSDK(route.map(parseMixedRouteApi) as any, parsedCurrencyIn, parsedCurrencyOut)
             : null,
         inputAmount,
         outputAmount,

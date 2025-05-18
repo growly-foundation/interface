@@ -81,7 +81,8 @@ function getClassicPoolProtocol(pool: Pair | V3Pool | V4Pool): ProtocolVersion |
  * Loops through all routes and returns an array of pools combinations.
  */
 function getRoutings(routes: ClassicTrade['routes']): Array<Array<Pair | V3Pool | V4Pool>> {
-  return routes.map((route) => route.pools)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-return
+  return routes.map((route) => route.pools as any)
 }
 
 /**
