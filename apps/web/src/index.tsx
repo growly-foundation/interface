@@ -4,6 +4,7 @@ import 'sideEffects'
 import { getDeviceId } from '@amplitude/analytics-browser'
 import { ApolloProvider } from '@apollo/client'
 import { datadogRum } from '@datadog/browser-rum'
+import '@getgrowly/suite/styles.css'
 import { PortalProvider } from '@tamagui/portal'
 import { QueryClientPersistProvider } from 'components/PersistQueryClient'
 import Web3Provider, { Web3ProviderUpdater } from 'components/Web3Provider'
@@ -28,6 +29,7 @@ import ApplicationUpdater from 'state/application/updater'
 import FiatOnRampTransactionsUpdater from 'state/fiatOnRampTransactions/updater'
 import ListsUpdater from 'state/lists/updater'
 import LogsUpdater from 'state/logs/updater'
+import { SuiteProviderWrapper } from 'suite'
 import { ThemeProvider, ThemedGlobalStyle } from 'theme'
 import { SystemThemeUpdater, ThemeColorMetaUpdater } from 'theme/components/ThemeToggle'
 import { TamaguiProvider } from 'theme/tamaguiProvider'
@@ -141,7 +143,9 @@ createRoot(container).render(
                                 <TamaguiProvider>
                                   <PortalProvider>
                                     <ThemedGlobalStyle />
-                                    <App />
+                                    <SuiteProviderWrapper>
+                                      <App />
+                                    </SuiteProviderWrapper>
                                   </PortalProvider>
                                 </TamaguiProvider>
                               </ThemeProvider>

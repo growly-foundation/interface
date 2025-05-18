@@ -105,7 +105,7 @@
     "ui": "workspace:^",
     "utilities": "workspace:^",
     "uuid": "9.0.0",
-    "wagmi": "2.9.3",
+    "wagmi": "2.15.3",
     "zod": "3.22.4"
   },
   "devDependencies": {
